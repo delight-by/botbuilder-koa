@@ -1,19 +1,14 @@
-import { ChatConnector, IChatConnectorSettings } from 'botbuilder';
+import { ChatConnector } from 'botbuilder';
 import { Middleware } from 'koa';
 
 export class KoaChatConnector extends ChatConnector {
-
-    constructor(settings?: IChatConnectorSettings) {
-        super(settings);
-    }
 
     public listen(): Middleware {
         const _listen = super.listen();
 
         return async (ctx, next) => {
             if (!(ctx.request as any).body) {
-                // todo: properly handle erroneous requests with empty bodies (allow ChatConnector to log them)
-                throw new Error("Please use a body parser middleware to parse request bodies.");
+                throw new Error("Request body is missing. Please make sure you have a body parsing middleware properly configured.");
             }
 
             await new Promise(resolve => {

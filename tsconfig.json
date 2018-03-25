@@ -2,12 +2,17 @@
     "compilerOptions": {
         "target": "es2015",
         "module": "commonjs",
+        "rootDir": "./src",
         "outDir": "./lib",
         "declaration": true,
+        "sourceMap": true,
         "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true
-    }
+    },
+    "include": [
+        "src/**/*"
+    ]
 }
