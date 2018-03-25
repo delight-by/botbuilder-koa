@@ -1,0 +1,22 @@
+{
+    "name": "botbuilder-koa",
+    "version": "1.0.0",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/delight-by/botbuilder-koa.git"
+    },
+    "author": "Alexander Lavrinovich <dev.delight@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "build": "tsc"
+    },
+    "dependencies": {
+        "botbuilder": "^3.14.1",
+        "koa": "^2.5.0"
+    },
+    "devDependencies": {
+        "@types/koa": "^2.0.44"
+    }
+}
